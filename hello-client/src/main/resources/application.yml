@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: hello-client
+  freemarker:
+    prefer-file-system-access: false
+server:
+  port: 8280
+  address: 192.168.43.199
+  servlet:
+    context-path: /hello-client
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://192.168.43.199:8080/eureka-server/eureka
+  instance:
+    hostname: 192.168.43.199
+logging:
+  level:
+    org.springframework.web: DEBUG
